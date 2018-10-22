@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Your Grocery List</h1>
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>Keyword  </th>
+            <th>Result   </th>
+            <th>Price </th>
+        </tr>
+        {% for item in data %}
+        <tr>
+            <td>{{item.keyword}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.price}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

@@ -1,7 +1,7 @@
 <html>
     <head>
         {% if title %}
-        <title>{{ title }} - Grocerizer Test</title>
+        <title>{{ title }} - Grocerizer</title>
         {% else %}
         <title>Welcome to Grocerizer!</title>
         {% endif %}
@@ -11,6 +11,7 @@
             Grocerizer:
             <a href="{{ url_for('index') }}">Home</a>
             <a href="{{ url_for('additem') }}">Add Item</a>
+            <a href="{{ url_for('view') }}">View List</a>
         </div>
         <hr>
         {% with messages = get_flashed_messages() %}
